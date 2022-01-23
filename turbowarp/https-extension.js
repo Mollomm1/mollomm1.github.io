@@ -54,6 +54,11 @@ class MyExtension {
               defaultValue: 'https://turbowarp.org/proxied'
             }
           }
+        },
+        {
+          opcode: 'textrecived',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'Text Recived'
         }
       ]
     };
@@ -77,6 +82,10 @@ class MyExtension {
     _status_code = recived.status;
     _text = recived.responseText;
     return ""
+  }
+  
+  textrecived() {
+    return _text
   }
 }
 
