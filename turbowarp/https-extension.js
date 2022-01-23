@@ -83,7 +83,7 @@ class MyExtension {
     const url=args.ONE;
     const urlfix = url.replace('https://','https:/').replace('http://','http:/')
     
-    const recived = httpGet("https://turbowarphttps-proxy.mollomm1.repl.co/"+urlfix)
+    const recived = httpGet("https://turbowarphttps-proxy.mollomm1.repl.co/v2/"+urlfix)
     _status_code = recived.status;
     _text = recived.responseText;
     return ""
