@@ -113,8 +113,8 @@ class MyExtension {
   }
   
   jsondecode(args) {
-    
-    return('')
+    const obj = JSON.parse(args.ONE)[args.TWO]
+    return(obj)
   }
 }
 
