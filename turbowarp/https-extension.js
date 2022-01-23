@@ -1,16 +1,10 @@
-function sleep(milliseconds) {
-  const date = Date.now();
-  let currentDate = null;
-  do {
-      currentDate = Date.now();
-  } while (currentDate - date < milliseconds);
-}
+// by @Mollomm1#0001 : https://turbowarp.org/editor?extension=https://mollomm1.tk/turbowarp/https-extension.js
 
 function httpGet(theUrl)
 {
     try{
       var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", ""+theUrl, false ); // false for synchronous request
+    xmlHttp.open( "GET", ""+theUrl, false );
     xmlHttp.send( null );
     return xmlHttp;
     }catch (NetworkError){
@@ -87,14 +81,12 @@ class MyExtension {
   GetHTTPS(args) {
     const url=args.ONE;
     const recived = httpGet(url);
-    
     _status_code = recived.status;
     _text = recived.responseText;
     return ''
   }
   
   GetHTTPSproxied(args) {
-    
     const url=args.ONE;
     const urlfix = url.replace('https://','https:/').replace('http://','http:/')
     
@@ -118,6 +110,4 @@ class MyExtension {
   }
 }
 
-// Call Scratch.extensions.register to register your extension
-// Make sure to register each extension exactly once
 Scratch.extensions.register(new MyExtension());
