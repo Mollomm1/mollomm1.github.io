@@ -12,7 +12,7 @@ function httpGet(theUrl)
       var xmlHttp = new XMLHttpRequest();
     xmlHttp.open( "GET", ""+theUrl, false ); // false for synchronous request
     xmlHttp.send( null );
-    return xmlHttp.responseText;
+    return xmlHttp;
     }catch (NetworkError){
       return('')
     }
@@ -20,8 +20,8 @@ function httpGet(theUrl)
 }
 
 // VARIABLES
-var text = "";
-var status_code = "500";
+var _text = "";
+var _status_code = "500";
 
 
 class MyExtension {
@@ -61,13 +61,22 @@ class MyExtension {
   
   GetHTTPS(args) {
     const url=args.ONE;
-    return httpGet(url)
+    const recived = httpGet(url);
+    
+    _status_code = recived.status;
+    _text = recived.responseText;
+    return ''
   }
   
   GetHTTPSproxied(args) {
+    
     const url=args.ONE;
     const urlfix = url.replace('https://','https:/').replace('http://','http:/')
-    return httpGet("https://turbowarphttps-proxy.mollomm1.repl.co/"+urlfix)
+    
+    const recived = httpGet("https://turbowarphttps-proxy.mollomm1.repl.co/"+urlfix)
+    _status_code = recived.status;
+    _text = recived.responseText;
+    return ""
   }
 }
 
