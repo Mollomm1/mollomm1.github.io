@@ -72,7 +72,7 @@ class MyExtension {
           arguments: {
             ONE: {
               type: Scratch.ArgumentType.STRING,
-              defaultValue: '{text: "Hello World !"}'
+              defaultValue: '{"text": "Hello World !"}'
             },
             TWO: {
               type: Scratch.ArgumentType.STRING,
