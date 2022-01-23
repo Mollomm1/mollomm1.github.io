@@ -76,7 +76,7 @@ class MyExtension {
             },
             TWO: {
               type: Scratch.ArgumentType.STRING,
-              defaultValue: 'reponse.world'
+              defaultValue: 'reponse.text'
             }
           }
         }
