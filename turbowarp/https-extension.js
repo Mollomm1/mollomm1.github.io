@@ -1,5 +1,3 @@
-// We use class syntax to define our extension object
-// This isn't actually necessary, but it tends to look the best
 function sleep(milliseconds) {
   const date = Date.now();
   let currentDate = null;
@@ -21,12 +19,14 @@ function httpGet(theUrl)
     
 }
 
-class MyExtension {
-  // VARIABLES //
-  var _text = "";
-  var _status_code = "500";
+// VARIABLES //
   
-  ///////////////
+  const text = "",
+  const status_code = "500",
+  
+///////////////
+
+class MyExtension {
   
   getInfo() {
     return {
@@ -60,7 +60,6 @@ class MyExtension {
       ]
     };
   }
-
   
   GetHTTPS(args) {
     const url=args.ONE;
