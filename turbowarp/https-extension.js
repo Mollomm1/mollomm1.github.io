@@ -30,7 +30,7 @@ class MyExtension {
     return {
       id: 'httpsv2',
 
-      name: 'Mollomm1\'s HTTPS (V2.0 WIP)',
+      name: 'Mollomm1\'s HTTPS (V2.0.0)',
 
       blocks: [
         {
