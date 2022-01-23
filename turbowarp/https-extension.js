@@ -72,11 +72,11 @@ class MyExtension {
           arguments: {
             ONE: {
               type: Scratch.ArgumentType.STRING,
-              defaultValue: '{reponse: {text: "Hello World !"}}'
+              defaultValue: '{text: "Hello World !"}'
             },
             TWO: {
               type: Scratch.ArgumentType.STRING,
-              defaultValue: 'reponse.text'
+              defaultValue: 'text'
             }
           }
         }
@@ -113,6 +113,7 @@ class MyExtension {
   }
   
   jsondecode(args) {
+    
     return('')
   }
 }
