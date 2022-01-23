@@ -19,12 +19,10 @@ function httpGet(theUrl)
     
 }
 
-// VARIABLES //
-  
-  const text = "",
-  const status_code = "500",
-  
-///////////////
+// VARIABLES
+var text = "";
+var status_code = "500";
+
 
 class MyExtension {
   
