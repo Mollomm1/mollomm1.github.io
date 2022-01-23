@@ -59,6 +59,11 @@ class MyExtension {
           opcode: 'textrecived',
           blockType: Scratch.BlockType.REPORTER,
           text: 'Text Recived'
+        },
+        {
+          opcode: 'statusrecived',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'Status Code Recived'
         }
       ]
     };
@@ -86,6 +91,10 @@ class MyExtension {
   
   textrecived() {
     return _text
+  }
+  
+  statusrecived() {
+    return _status_code
   }
 }
 
