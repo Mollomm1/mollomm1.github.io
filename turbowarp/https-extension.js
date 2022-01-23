@@ -64,6 +64,21 @@ class MyExtension {
           opcode: 'statusrecived',
           blockType: Scratch.BlockType.REPORTER,
           text: 'Status Code Recived'
+        },
+        {
+          opcode: 'jsondecode',
+          blockType: Scratch.BlockType.REPORTER,
+          text: '[JSON] Decode in the string [ONE] : [TWO]',
+          arguments: {
+            ONE: {
+              type: Scratch.ArgumentType.STRING,
+              defaultValue: '{reponse: {text: "Hello World !"}}'
+            },
+            TWO: {
+              type: Scratch.ArgumentType.STRING,
+              defaultValue: 'reponse.world'
+            }
+          }
         }
       ]
     };
@@ -95,6 +110,10 @@ class MyExtension {
   
   statusrecived() {
     return _status_code
+  }
+  
+  jsondecode(args) {
+    return('')
   }
 }
 
