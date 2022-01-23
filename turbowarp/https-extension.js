@@ -68,7 +68,7 @@ class MyExtension {
         {
           opcode: 'jsondecode',
           blockType: Scratch.BlockType.REPORTER,
-          text: '[JSON\] Decode in the string [ONE] : [TWO]',
+          text: '{JSON} Decode in the string [ONE] : [TWO]',
           arguments: {
             ONE: {
               type: Scratch.ArgumentType.STRING,
