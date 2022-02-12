@@ -222,7 +222,7 @@ function copytext() {
 
 function update() {
 	//console.log("updated !")
-	const zefresf = '<stroke color="'+document.getElementById("textbordercolortop").value+'" thickness="6"><font face="'+document.getElementById("fontup").value+'" color="'+document.getElementById("textcolorup").value+'" size="30">'+document.getElementById("textup").value+'<br /></font><font face="'+document.getElementById("fontdown").value+'" color="'+document.getElementById("textcolordown").value+'"><stroke color="'+document.getElementById("textbordercolordown").value+'" thickness="3">'+document.getElementById("textdown").value+'</stroke></font></stroke>'
+	const zefresf = '&lt;stroke color="'+document.getElementById("textbordercolortop").value+'" thickness="6">&lt;font face="'+document.getElementById("fontup").value+'" color="'+document.getElementById("textcolorup").value+'" size="30">'+document.getElementById("textup").value+'<br /></font>&lt;font face="'+document.getElementById("fontdown").value+'" color="'+document.getElementById("textcolordown").value+'">&lt;stroke color="'+document.getElementById("textbordercolordown").value+'" thickness="3">'+document.getElementById("textdown").value+'</stroke></font></stroke>'
 	document.getElementById("output").innerHTML = zefresf;
 	loop()
 };
