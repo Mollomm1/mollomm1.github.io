@@ -14,6 +14,26 @@
 </p>
 
 <p>
+<select name="font (UP)" id="fontup">
+		<option value="Arial">Arial</option>
+		<option value="ArialBold">ArialBold</option>
+		<option value="SourceSans">SourceSans</option>
+		<option value="SourceSansBold">SourceSansBold</option>
+		<option value="SourceSansLight">SourceSansLight</option>
+		<option value="Cartoon">Cartoon</option>
+		<option value="Highway">Highway</option>
+		<option value="SciFi">SciFi</option>
+		<option value="Arcade">Arcade</option>
+		<option value="Fantasy">Fantasy</option>
+		<option value="Antique">Antique</option>
+		<option value="Gotham">Gotham</option>
+		<option value="GothamBold">GothamBold</option>
+		<option value="GothamBlack">GothamBlack</option>
+		<option value="LuckiestGuy">LuckiestGuy</option>
+</select>
+</p>
+
+<p>
 <div>
     <input type="color" id="textcolorup" name="textcolorup"
            value="#ffffff">
@@ -35,6 +55,26 @@
     <input type="textdown" id="textdown" name="textdown"
            value="pls donate">
 </div>
+</p>
+
+<p>
+<select name="font (DOWN)" id="fontdown">
+		<option value="Arial">Arial</option>
+		<option value="ArialBold">ArialBold</option>
+		<option value="SourceSans">SourceSans</option>
+		<option value="SourceSansBold">SourceSansBold</option>
+		<option value="SourceSansLight">SourceSansLight</option>
+		<option value="Cartoon">Cartoon</option>
+		<option value="Highway">Highway</option>
+		<option value="SciFi">SciFi</option>
+		<option value="Arcade">Arcade</option>
+		<option value="Fantasy">Fantasy</option>
+		<option value="Antique">Antique</option>
+		<option value="Gotham">Gotham</option>
+		<option value="GothamBold">GothamBold</option>
+		<option value="GothamBlack">GothamBlack</option>
+		<option value="LuckiestGuy">LuckiestGuy</option>
+</select>
 </p>
 
 <p>
@@ -63,7 +103,7 @@ text to enter in roblox:
 <script>
 function copytext() {
   var copyText = document.createElement("input");
-  copyText.value = '<stroke color="'+document.getElementById("textbordercolortop").value+'" thickness="6"><font color="'+document.getElementById("textcolorup").value+'" size="30">'+document.getElementById("textup").value+'<br /></font><font color="'+document.getElementById("textcolordown").value+'"><stroke color="'+document.getElementById("textbordercolordown").value+'" thickness="3">'+document.getElementById("textdown").value+'</stroke></font></stroke>'
+  copyText.value = '<stroke color="'+document.getElementById("textbordercolortop").value+'" thickness="6"><font face="'+document.getElementById("fontup").value+'" color="'+document.getElementById("textcolorup").value+'" size="30">'+document.getElementById("textup").value+'<br /></font><font face="'+document.getElementById("fontdown").value+'" color="'+document.getElementById("textcolordown").value+'"><stroke color="'+document.getElementById("textbordercolordown").value+'" thickness="3">'+document.getElementById("textdown").value+'</stroke></font></stroke>'
   /* Select the text field */
   
   copyText.select();
@@ -78,7 +118,7 @@ function copytext() {
 
 function update() {
 	//console.log("updated !")
-	const zefresf = '&lt;stroke color="'+document.getElementById("textbordercolortop").value+'" thickness="6">&lt;font color="'+document.getElementById("textcolorup").value+'" size="30">'+document.getElementById("textup").value+'&lt;br /></font>&lt;font color="'+document.getElementById("textcolordown").value+'">&lt;stroke color="'+document.getElementById("textbordercolordown").value+'" thickness="3">'+document.getElementById("textdown").value+'&lt;/stroke>&lt;/font>&lt;/stroke>'
+	const zefresf = '<stroke color="'+document.getElementById("textbordercolortop").value+'" thickness="6"><font face="'+document.getElementById("fontup").value+'" color="'+document.getElementById("textcolorup").value+'" size="30">'+document.getElementById("textup").value+'<br /></font><font face="'+document.getElementById("fontdown").value+'" color="'+document.getElementById("textcolordown").value+'"><stroke color="'+document.getElementById("textbordercolordown").value+'" thickness="3">'+document.getElementById("textdown").value+'</stroke></font></stroke>'
 	document.getElementById("output").innerHTML = zefresf;
 	loop()
 };
