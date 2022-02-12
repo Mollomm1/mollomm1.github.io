@@ -119,7 +119,7 @@
 </p>
 
 <p>
-<select style="background-color: #5d5b5b; color: #ffffff" name="font (UP)" id="fontup">
+<select style="background-color: #5d5b5b; color: #ffffff" value="GothamBlack" name="font (UP)" id="fontup">
 		<option value="Arial">Arial</option>
 		<option value="ArialBold">ArialBold</option>
 		<option value="SourceSans">SourceSans</option>
@@ -166,7 +166,7 @@
 </p>
 
 <p>
-<select style="background-color: #5d5b5b; color: #ffffff" name="font (DOWN)" id="fontdown">
+<select style="background-color: #5d5b5b; color: #ffffff" value="GothamBlack" name="font (DOWN)" id="fontdown">
 		<option value="Arial">Arial</option>
 		<option value="ArialBold">ArialBold</option>
 		<option value="SourceSans">SourceSans</option>
@@ -212,7 +212,7 @@ text to enter in roblox:
 <script>
 function copytext() {
   var copyText = document.createElement("input");
-  copyText.value = '<stroke color="'+document.getElementById("textbordercolortop").value+'" thickness="6"><font face="'+document.getElementById("fontup").value+'" color="'+document.getElementById("textcolorup").value+'" size="30">'+document.getElementById("textup").value+'<br /></font><font face="'+document.getElementById("fontdown").value+'" color="'+document.getElementById("textcolordown").value+'"><stroke color="'+document.getElementById("textbordercolordown").value+'" thickness="3">'+document.getElementById("textdown").value+'</stroke></font></stroke>'
+  copyText.value = '<stroke color="'+document.getElementById("textbordercolortop").value+'" thickness="4"><font face="'+document.getElementById("fontup").value+'" color="'+document.getElementById("textcolorup").value+'" size="30">'+document.getElementById("textup").value+'<br /></font><font face="'+document.getElementById("fontdown").value+'" color="'+document.getElementById("textcolordown").value+'"><stroke color="'+document.getElementById("textbordercolordown").value+'" thickness="2">'+document.getElementById("textdown").value+'</stroke></font></stroke>'
   /* Select the text field */
   
   copyText.select();
@@ -227,7 +227,7 @@ function copytext() {
 
 function update() {
 	//console.log("updated !")
-	const zefresf = '&lt;stroke color="'+document.getElementById("textbordercolortop").value+'" thickness="6">&lt;font face="'+document.getElementById("fontup").value+'" color="'+document.getElementById("textcolorup").value+'" size="30">'+document.getElementById("textup").value+'&lt;br />&lt;/font>&lt;font face="'+document.getElementById("fontdown").value+'" color="'+document.getElementById("textcolordown").value+'">&lt;stroke color="'+document.getElementById("textbordercolordown").value+'" thickness="3">'+document.getElementById("textdown").value+'&lt;/stroke>&lt;/font>&lt;/stroke>'
+	const zefresf = '&lt;stroke color="'+document.getElementById("textbordercolortop").value+'" thickness="4">&lt;font face="'+document.getElementById("fontup").value+'" color="'+document.getElementById("textcolorup").value+'" size="30">'+document.getElementById("textup").value+'&lt;br />&lt;/font>&lt;font face="'+document.getElementById("fontdown").value+'" color="'+document.getElementById("textcolordown").value+'">&lt;stroke color="'+document.getElementById("textbordercolordown").value+'" thickness="2">'+document.getElementById("textdown").value+'&lt;/stroke>&lt;/font>&lt;/stroke>'
 	document.getElementById("output").innerHTML = zefresf;
 	loop()
 };
