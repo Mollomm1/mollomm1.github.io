@@ -1,0 +1,88 @@
+<h2>Mollomm1's Simple Sucks RichText Template Generator For PLS DONATE</h2>
+<p><h3> > Input settings here.</h3></p>
+
+<p>
+<div>
+    <label for="textup">Text (UP) : </label>
+    <input type="textup" id="textup" name="textcolorup"
+           value="Mollomm1 Is My Hero">
+</div>
+</p>
+
+<p>
+<div>
+    <input type="color" id="textcolorup" name="textcolorup"
+           value="#ffffff">
+    <label for="textcolorup">TEXT COLOR (UP)</label>
+</div>
+</p>
+
+<p>
+<div>
+    <input type="color" id="textbordercolortop" name="textbordercolortop"
+           value="#000000">
+    <label for="textbordercolortop">TEXT BORDER COLOR (UP)</label>
+</div>
+</p>
+
+<p>
+<div>
+    <label for="textdown">Text (DOWN) : </label>
+    <input type="textdown" id="textdown" name="textdown"
+           value="pls donate">
+</div>
+</p>
+
+<p>
+<div>
+    <input type="color" id="textcolordown" name="textcolordown"
+           value="#ffffff">
+    <label for="textcolordown">TEXT COLOR (DOWN)</label>
+</div>
+</p>
+
+<p>
+<div>
+    <input type="color" id="textbordercolordown" name="textbordercolordown"
+           value="#000000">
+    <label for="textbordercolordown">TEXT BORDER COLOR (DOWN)</label>
+</div>
+</p>
+
+<p><h3> > Output.</h3></p>
+text to enter in roblox:
+<p><div style="background-color: grey; color: white;" id="output" display="none">...</div></p>
+<button onclick="copytext()">copy text</button>
+<p>By Mollomm1 for lasy beggers</p>
+
+
+<script>
+function copytext() {
+  var copyText = document.createElement("input");
+  copyText.value = '<stroke color="'+document.getElementById("textbordercolortop").value+'" thickness="6"><font color="'+document.getElementById("textcolorup").value+'" size="30">'+document.getElementById("textup").value+'<br /></font><font color="'+document.getElementById("textcolordown").value+'"><stroke color="'+document.getElementById("textbordercolordown").value+'" thickness="3">'+document.getElementById("textdown").value+'</stroke></font></stroke>'
+  /* Select the text field */
+  
+  copyText.select();
+  copyText.setSelectionRange(0, 1000); /* For mobile devices */
+
+   /* Copy the text inside the text field */
+  navigator.clipboard.writeText(copyText.value);
+
+  /* Alert the copied text */
+  alert("Copied the text with succes !");
+}
+
+function update() {
+	//console.log("updated !")
+	const zefresf = '&lt;stroke color="'+document.getElementById("textbordercolortop").value+'" thickness="6">&lt;font color="'+document.getElementById("textcolorup").value+'" size="30">'+document.getElementById("textup").value+'&lt;br /></font>&lt;font color="'+document.getElementById("textcolordown").value+'">&lt;stroke color="'+document.getElementById("textbordercolordown").value+'" thickness="3">'+document.getElementById("textdown").value+'&lt;/stroke>&lt;/font>&lt;/stroke>'
+	document.getElementById("output").innerHTML = zefresf;
+	loop()
+};
+
+function loop() {
+	setTimeout(() => {update()}, 500);
+};
+
+console.log("d")
+loop()
+</script>
