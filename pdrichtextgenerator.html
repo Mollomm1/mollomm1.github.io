@@ -1,6 +1,6 @@
 <!-- Live vertion : https://mollomm1.github.io/pdrichtextgenerator.html -->
 <head>
-	<title>MSSRTGFPD - V1.2.4</title>
+	<title>MSSRTGFPD - V1.3.0</title>
 	<style>
 	@import 'https://fonts.googleapis.com/css?family=Open+Sans';
 	
@@ -106,7 +106,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Acme|Alegreya|Alegreya+Sans|Anton|Archivo|Archivo+Black|Archivo+Narrow|Arimo|Arvo|Asap|Asap+Condensed|Bitter|Bowlby+One+SC|Bree+Serif|Cabin|Cairo|Catamaran|Crete+Round|Crimson+Text|Cuprum|Dancing+Script|Dosis|Droid+Sans|Droid+Serif|EB+Garamond|Exo|Exo+2|Faustina|Fira+Sans|Fjalla+One|Francois+One|Gloria+Hallelujah|Hind|Inconsolata|Indie+Flower|Josefin+Sans|Julee|Karla|Lato|Libre+Baskerville|Libre+Franklin|Lobster|Lora|Mada|Manuale|Maven+Pro|Merriweather|Merriweather+Sans|Montserrat|Montserrat+Subrayada|Mukta+Vaani|Muli|Noto+Sans|Noto+Serif|Nunito|Open+Sans|Open+Sans+Condensed:300|Oswald|Oxygen|PT+Sans|PT+Sans+Caption|PT+Sans+Narrow|PT+Serif|Pacifico|Passion+One|Pathway+Gothic+One|Play|Playfair+Display|Poppins|Questrial|Quicksand|Raleway|Roboto|Roboto+Condensed|Roboto+Mono|Roboto+Slab|Ropa+Sans|Rubik|Saira|Saira+Condensed|Saira+Extra+Condensed|Saira+Semi+Condensed|Sedgwick+Ave|Sedgwick+Ave+Display|Shadows+Into+Light|Signika|Slabo+27px|Source+Code+Pro|Source+Sans+Pro|Spectral|Titillium+Web|Ubuntu|Ubuntu+Condensed|Varela+Round|Vollkorn|Work+Sans|Yanone+Kaffeesatz|Zilla+Slab|Zilla+Slab+Highlight" rel="stylesheet">
 </head>
 
-<h1><b><u>[MSSRTGFPD] Mollomm1's Simple Sucks RichText Template Generator For PLS DONATE - V1.2.4</u></b></h1>
+<h1><b><u>[MSSRTGFPD] Mollomm1's Simple Sucks RichText Template Generator For PLS DONATE - V1.3.0</u></b></h1>
 <p><h2><b> > Input settings here.</b></h2></p>
 
 <div style="background-color: #5555"><h3> <text style="position: relative; left: 20">Line 1 - Big</text></h3>
@@ -115,6 +115,22 @@
     <input style="background-color: #5d5b5b; color: #ffffff" type="textup" id="textup" name="textcolorup"
            value="Mollomm1 Is My Hero">
     <label for="textup">Text</label>
+</div>
+</p>
+
+<p>
+<div>
+    <input style="background-color: #5d5b5b; color: #ffffff" type="number" id="textsizeup" name="textsizeup"
+           value="30" max=100 min=8>
+    <label for="number">Text Size</label>
+</div>
+</p>
+
+<p>
+<div>
+    <input style="background-color: #5d5b5b; color: #ffffff" type="number" id="textbordersizeup" name="textbordersizeup"
+           value="4" max=50 min=1>
+    <label for="number">Text Border Size</label>
 </div>
 </p>
 
@@ -166,6 +182,22 @@
 </p>
 
 <p>
+<div>
+    <input style="background-color: #5d5b5b; color: #ffffff" type="number" id="textsizedown" name="textsizedown"
+           value="12" max=100 min=8>
+    <label for="number">Text Size</label>
+</div>
+</p>
+
+<p>
+<div>
+    <input style="background-color: #5d5b5b; color: #ffffff" type="number" id="textbordersizedown" name="textbordersizedown"
+           value="2" max=50 min=1>
+    <label for="number">Text  Border Size</label>
+</div>
+</p>
+
+<p>
 <select style="background-color: #5d5b5b; color: #ffffff" value="GothamBlack" name="font (DOWN)" id="fontdown">
 		<option value="Arial">Arial</option>
 		<option value="ArialBold">ArialBold</option>
@@ -203,15 +235,15 @@
 </div>
 
 <p><h2><b> > Output.</b></h2></p>
-<button style="position: relative; padding: 5px 300px; left: 15 ;background-color: #5d5b5b; color: #ffffff" onclick="copytext()"><font size="6">Copy Text To Clipboard</font></button>
-<p>By Mollomm1 for lasy beggers <b>|</b> <a href="https://www.roblox.com/catalog/7042228687/Donate-25">donate 25 robux to mollomm1</a> <b>|</b> <a href="https://github.com/Mollomm1/mollomm1.github.io/blob/main/pdrichtextgenerator.html">Source code</a></p>
-
+<button style="position: relative; padding: 5px 100px; left: 15 ;background-color: #5d5b5b; color: #ffffff" id="copybutton" onclick="copytext()"><font size="6">Copy Text To Clipboard</font></button>
+<div style="border-radius: 8px; background-color: #383838; position: sticky; bottom: 0%; height: 50px; width: 95%;">
+	<p style="position: relative; left: 25"><font size=4>By Mollomm1 for lasy beggers <b>|</b>donate <a href="https://www.roblox.com/catalog/5702473614/-"> 100</a>/<a href="https://www.roblox.com/catalog/5167678004/-">1000</a>/<a href="https://www.roblox.com/catalog/5702480614/-">10000</a> robux to mollomm1<b>|</b> <a href="https://github.com/Mollomm1/mollomm1.github.io/blob/main/pdrichtextgenerator.html">Source code</a></font></p>
+</div>
 
 <script>
 function copytext() {
   var copyText = document.createElement("input");
-  copyText.value = '<stroke color="'+document.getElementById("textbordercolortop").value+'" thickness="4"><font face="'+document.getElementById("fontup").value+'" color="'+document.getElementById("textcolorup").value+'" size="30">'+document.getElementById("textup").value+'<br /></font><font face="'+document.getElementById("fontdown").value+'" color="'+document.getElementById("textcolordown").value+'"><stroke color="'+document.getElementById("textbordercolordown").value+'" thickness="2">'+document.getElementById("textdown").value+'</stroke></font></stroke>'
-  /* Select the text field */
+  copyText.value = '<stroke color="'+document.getElementById("textbordercolortop").value+'" thickness="'+document.getElementById("textbordersizeup").value+'"><font face="'+document.getElementById("fontup").value+'" color="'+document.getElementById("textcolorup").value+'" size="'+document.getElementById("textsizeup").value+'">'+document.getElementById("textup").value+'<br /></font><font size="'+document.getElementById("textsizedown").value+'" face="'+document.getElementById("fontdown").value+'" color="'+document.getElementById("textcolordown").value+'"><stroke color="'+document.getElementById("textbordercolordown").value+'" thickness="'+document.getElementById("textbordersizedown").value+'">'+document.getElementById("textdown").value+'</stroke></font></stroke>'
   
   copyText.select();
   copyText.setSelectionRange(0, 1000); /* For mobile devices */
@@ -226,4 +258,6 @@ function copytext() {
 console.log("loaded !")
 document.getElementById("fontdown").value = "GothamBold"
 document.getElementById("fontup").value = "GothamBold"
-</script>
+
+var interval = setInterval(function() { 
+   var rsftre = '<stroke color="'+document.getElementById("textbordercolortop").value+'" thickness="'+document.getElementById("textbordersizeup").value+'"><font face="'+document.getElementById("fontup").value+'" color="'+document.getElementById("textcolorup").value+'" size="'+document.getElementById("textsizeup").value+'">'+document.getElementById("textup").value+'<br /></font><font size="'+document.getElementById("textsizedown").value+'" 
