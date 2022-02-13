@@ -242,8 +242,7 @@
 <script>
 function copytext() {
   var copyText = document.createElement("input");
-  copyText.value = '<stroke color="'+document.getElementById("textbordercolortop").value+'" thickness="4"><font face="'+document.getElementById("fontup").value+'" color="'+document.getElementById("textcolorup").value+'" size="'+document.getElementById("textsizeup").value+'">'+document.getElementById("textup").value+'<br /></font><font size="'+document.getElementById("textsizedown").value+'" face="'+document.getElementById("fontdown").value+'" color="'+document.getElementById("textcolordown").value+'"><stroke color="'+document.getElementById("textbordercolordown").value+'" thickness="2">'+document.getElementById("textdown").value+'</stroke></font></stroke>'
-  /* Select the text field */
+  copyText.value = '<stroke color="'+document.getElementById("textbordercolortop").value+'" thickness="'+document.getElementById("textbordersizeup").value+'"><font face="'+document.getElementById("fontup").value+'" color="'+document.getElementById("textcolorup").value+'" size="'+document.getElementById("textsizeup").value+'">'+document.getElementById("textup").value+'<br /></font><font size="'+document.getElementById("textsizedown").value+'" face="'+document.getElementById("fontdown").value+'" color="'+document.getElementById("textcolordown").value+'"><stroke color="'+document.getElementById("textbordercolordown").value+'" thickness="'+document.getElementById("textbordersizedown").value+'">'+document.getElementById("textdown").value+'</stroke></font></stroke>'
   
   copyText.select();
   copyText.setSelectionRange(0, 1000); /* For mobile devices */
