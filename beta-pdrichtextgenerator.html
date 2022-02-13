@@ -235,9 +235,10 @@
 </div>
 
 <p><h2><b> > Output.</b></h2></p>
-<button style="position: relative; padding: 5px 300px; left: 15 ;background-color: #5d5b5b; color: #ffffff" id="copybutton" onclick="copytext()"><font size="6">Copy Text To Clipboard</font></button>
-<p>By Mollomm1 for lasy beggers <b>|</b> <a href="https://www.roblox.com/catalog/5702473614/-">donate 100 robux to mollomm1</a> <b>|</b> <a href="https://www.roblox.com/catalog/5167678004/-">donate 1000 robux to mollomm1</a> <b>|</b> <a href="https://www.roblox.com/catalog/5702480614/-">donate 10000 robux to mollomm1</a> <b>|</b> <a href="https://github.com/Mollomm1/mollomm1.github.io/blob/main/pdrichtextgenerator.html">Source code</a></p>
-
+<button style="position: relative; padding: 5px 100px; left: 15 ;background-color: #5d5b5b; color: #ffffff" id="copybutton" onclick="copytext()"><font size="6">Copy Text To Clipboard</font></button>
+<div style="border-radius: 8px; background-color: #383838; position: sticky; bottom: 0%; height: 50px; width: 95%;">
+	<p style="position: relative; left: 25"><font size=4>By Mollomm1 for lasy beggers <b>|</b>donate <a href="https://www.roblox.com/catalog/5702473614/-"> 100</a>/<a href="https://www.roblox.com/catalog/5167678004/-">1000</a>/<a href="https://www.roblox.com/catalog/5702480614/-">10000</a> robux to mollomm1<b>|</b> <a href="https://github.com/Mollomm1/mollomm1.github.io/blob/main/pdrichtextgenerator.html">Source code</a></font></p>
+</div>
 
 <script>
 function copytext() {
@@ -259,8 +260,4 @@ document.getElementById("fontdown").value = "GothamBold"
 document.getElementById("fontup").value = "GothamBold"
 
 var interval = setInterval(function() { 
-   var rsftre = '<stroke color="'+document.getElementById("textbordercolortop").value+'" thickness="'+document.getElementById("textbordersizeup").value+'"><font face="'+document.getElementById("fontup").value+'" color="'+document.getElementById("textcolorup").value+'" size="'+document.getElementById("textsizeup").value+'">'+document.getElementById("textup").value+'<br /></font><font size="'+document.getElementById("textsizedown").value+'" face="'+document.getElementById("fontdown").value+'" color="'+document.getElementById("textcolordown").value+'"><stroke color="'+document.getElementById("textbordercolordown").value+'" thickness="'+document.getElementById("textbordersizedown").value+'">'+document.getElementById("textdown").value+'</stroke></font></stroke>'
-   document.getElementById("copybutton").innerHTML = '<font size="6">Copy Text To Clipboard ('+rsftre.length+')</font>'
-}, 300);
-
-</script>
+   var rsftre = '<stroke color="'+document.getElementById("textbordercolortop").value+'" thickness="'+document.getElementById("textbordersizeup").value+'"><font face="'+document.getElementById("fontup").value+'" color="'+document.getElementById("textcolorup").value+'" size="'+document.getElementById("textsizeup").value+'">'+document.getElementById("textup").value+'<br /></font><font size="'+document.getElementById("textsizedown").value+'" 
