@@ -127,6 +127,14 @@
 </p>
 
 <p>
+<div>
+    <input style="background-color: #5d5b5b; color: #ffffff" type="number" id="textbordersizeup" name="textbordersizeup"
+           value="4" max=50 min=1>
+    <label for="number">Text Border Size</label>
+</div>
+</p>
+
+<p>
 <select style="background-color: #5d5b5b; color: #ffffff" value="GothamBlack" name="font (UP)" id="fontup">
 		<option value="Arial">Arial</option>
 		<option value="ArialBold">ArialBold</option>
@@ -178,6 +186,14 @@
     <input style="background-color: #5d5b5b; color: #ffffff" type="number" id="textsizedown" name="textsizedown"
            value="12" max=100 min=8>
     <label for="number">Text Size</label>
+</div>
+</p>
+
+<p>
+<div>
+    <input style="background-color: #5d5b5b; color: #ffffff" type="number" id="textbordersizedown" name="textbordersizedown"
+           value="2" max=50 min=1>
+    <label for="number">Text  Border Size</label>
 </div>
 </p>
 
@@ -244,7 +260,7 @@ document.getElementById("fontdown").value = "GothamBold"
 document.getElementById("fontup").value = "GothamBold"
 
 var interval = setInterval(function() { 
-   var rsftre = '<stroke color="'+document.getElementById("textbordercolortop").value+'" thickness="4"><font face="'+document.getElementById("fontup").value+'" color="'+document.getElementById("textcolorup").value+'" size="'+document.getElementById("textsizeup").value+'">'+document.getElementById("textup").value+'<br /></font><font size="'+document.getElementById("textsizedown").value+'" face="'+document.getElementById("fontdown").value+'" color="'+document.getElementById("textcolordown").value+'"><stroke color="'+document.getElementById("textbordercolordown").value+'" thickness="2">'+document.getElementById("textdown").value+'</stroke></font></stroke>'
+   var rsftre = '<stroke color="'+document.getElementById("textbordercolortop").value+'" thickness="'+document.getElementById("textbordersizeup").value+'"><font face="'+document.getElementById("fontup").value+'" color="'+document.getElementById("textcolorup").value+'" size="'+document.getElementById("textsizeup").value+'">'+document.getElementById("textup").value+'<br /></font><font size="'+document.getElementById("textsizedown").value+'" face="'+document.getElementById("fontdown").value+'" color="'+document.getElementById("textcolordown").value+'"><stroke color="'+document.getElementById("textbordercolordown").value+'" thickness="'+document.getElementById("textbordersizedown").value+'">'+document.getElementById("textdown").value+'</stroke></font></stroke>'
    document.getElementById("copybutton").innerHTML = '<font size="6">Copy Text To Clipboard ('+rsftre.length+')</font>'
 }, 300);
 
